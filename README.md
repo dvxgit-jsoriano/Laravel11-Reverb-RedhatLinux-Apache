@@ -1,6 +1,21 @@
 # LARAVEL 11 + REVERB + REDHAT LINUX 9.5 + APACHE
 
-Assuming you already installed and created a laravel project and added laravel reverb. This is the setup you need on an Apache Web server in Redhat Linux like Oracle Linux 9, Rocky Linux 9, Alma Linux 9.
+- This is a guide on how you can set up your Redhat Linux with a self-signed SSL or a valid SSl and run your web through `https` and `wss` secured websocket layer.
+
+- Assuming you already installed and created a laravel project and added laravel reverb. This is the setup you need on an Apache Web server in Redhat Linux like Oracle Linux 9, Rocky Linux 9, Alma Linux 9.
+
+## Some Errors Being Experienced:
+
+- Error upon broadcasting
+```
+cURL error 1: Received HTTP/0.9 when not allowed (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for http://192.168.33.157:8080/apps/451837/events?auth_key=jbveh4ctpsv42yq0vlpp&auth_timestamp=1734671824&auth_version=1.0&body_md5=b37f3c1e2cae2071b566c36bd8950c8f&auth_signature=000009d8487c3e69740aebc76875eb154ce5813574d9e0709dc5b5874ceb0dc8
+```
+
+- Echo not defined. Resolved by adding `window.Echo` and `<script type="module">`
+```
+Uncaught ReferenceError: Echo is not defined
+    at dashboard:1007:23
+```
 
 ## Under config/reverb.php
 
