@@ -4,7 +4,7 @@ Assuming you already installed and created a laravel project and added laravel r
 
 ## Under config/reverb.php
 
-```conf
+```shell
 ...
 'reverb' => [
     'host' => env('REVERB_SERVER_HOST', '0.0.0.0'),
