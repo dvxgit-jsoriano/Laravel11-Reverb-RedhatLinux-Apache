@@ -25,7 +25,7 @@ Assuming you already installed and created a laravel project and added laravel r
 
 ## Under config/broadcasting.php
 
-```conf
+```shell
 'reverb' => [
     'driver' => 'reverb',
     'key' => env('REVERB_APP_KEY'),
